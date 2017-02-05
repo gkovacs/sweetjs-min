@@ -4,20 +4,13 @@
     "macros",
     "javascript"
   ],
-  "license": "BSD-2-Clause",
-  "licenses": [
-    {
-      "type": "BSD",
-      "url": "http://github.com/mozilla/sweet.js/master/LICENSE.BSD"
-    }
-  ],
   "main": "dist/sweet.js",
   "name": "sweetjs-min",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mozilla/sweet.js.git"
+    "url": "git://github.com/gkovacs/sweetjs-min.git"
   },
   "version": "2.2.1",
   "devDependencies": {},
