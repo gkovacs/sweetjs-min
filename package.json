@@ -12,13 +12,12 @@
     "type": "git",
     "url": "git://github.com/gkovacs/sweetjs-min.git"
   },
-  "version": "2.2.2",
+  "version": "2.2.3",
   "devDependencies": {},
   "dependencies": {
     "immutable": "^3.8.1",
     "ramda": "^0.23.0",
     "ramda-fantasy": "^0.7.0",
-    "resolve": "^1.2.0",
     "shift-codegen": "^5.0.2",
     "shift-parser": "^5.0.2",
     "shift-reducer": "3.0.3",
