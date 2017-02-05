@@ -33,8 +33,12 @@
     "immutable": "^3.8.1",
     "ramda": "^0.23.0",
     "ramda-fantasy": "^0.7.0",
+    "resolve": "^1.2.0",
     "shift-codegen": "^5.0.2",
-    "shift-reducer": "^4.0.0",
-    "sweet-spec": "^3.0.0-pre.3"
+    "shift-parser": "^5.0.2",
+    "shift-reducer": "3.0.3",
+    "sweet-spec": "1.1.0",
+    "transit-js": "^0.8.846",
+    "utils-dirname": "^1.0.0"
   }
 }
