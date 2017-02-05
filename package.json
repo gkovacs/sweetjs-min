@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/mozilla/sweet.js#readme",
+  "homepage": "https://github.com/gkovacs/sweet-js-min#readme",
   "keywords": [
     "macros",
     "javascript"
@@ -12,13 +12,7 @@
     }
   ],
   "main": "dist/sweet.js",
-  "maintainers": [
-    {
-      "name": "disnet",
-      "email": "tim.disney@gmail.com"
-    }
-  ],
-  "name": "sweet.js",
+  "name": "sweet-js-min",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
