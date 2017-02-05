@@ -1,0 +1,40 @@
+{
+  "homepage": "https://github.com/mozilla/sweet.js#readme",
+  "keywords": [
+    "macros",
+    "javascript"
+  ],
+  "license": "BSD-2-Clause",
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/mozilla/sweet.js/master/LICENSE.BSD"
+    }
+  ],
+  "main": "dist/sweet.js",
+  "maintainers": [
+    {
+      "name": "disnet",
+      "email": "tim.disney@gmail.com"
+    }
+  ],
+  "name": "sweet.js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozilla/sweet.js.git"
+  },
+  "version": "2.2.1",
+  "devDependencies": {
+    "yargs": "^6.6.0"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "ramda": "^0.23.0",
+    "ramda-fantasy": "^0.7.0",
+    "shift-codegen": "^5.0.2",
+    "shift-reducer": "^4.0.0",
+    "sweet-spec": "^3.0.0-pre.3"
+  }
+}
