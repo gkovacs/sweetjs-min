@@ -43,7 +43,7 @@ const isBrackets = s => s && typeof s.match === 'function' && s.match("brackets"
 
 const insertIntoDelimiter = _ramda2.default.cond([[isBraces, (s, r) => _syntax2.default.from("braces", r, s)], [isParens, (s, r) => _syntax2.default.from("parens", r, s)], [isBrackets, (s, r) => _syntax2.default.from("brackets", r, s)]]);
 
-const process = (acc, s) => {
+const process2 = (acc, s) => {
   if (isBraces(s) && isDolar(acc.template.last())) {
     return {
       template: acc.template.push(_syntax2.default.from("braces", _immutable.List.of(_syntax2.default.from("number", acc.interp.size)), s)),
@@ -102,7 +102,7 @@ const replace = (acc, s) => {
 function processTemplate(temp) {
   let interp = arguments.length <= 1 || arguments[1] === undefined ? (0, _immutable.List)() : arguments[1];
 
-  return temp.reduce(process, { template: (0, _immutable.List)(), interp: interp });
+  return temp.reduce(process2, { template: (0, _immutable.List)(), interp: interp });
 }
 
 function replaceTemplate(temp, rep) {
