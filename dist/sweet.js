@@ -31,14 +31,6 @@ var _terms2 = _interopRequireDefault(_terms);
 
 var _modules = require("./modules");
 
-var _nodeModuleResolver = require("./node-module-resolver");
-
-var _nodeModuleResolver2 = _interopRequireDefault(_nodeModuleResolver);
-
-var _nodeModuleLoader = require("./node-module-loader");
-
-var _nodeModuleLoader2 = _interopRequireDefault(_nodeModuleLoader);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function expand(source) {
@@ -52,8 +44,8 @@ function expand(source) {
     transform: options.transform || function (c) {
       return { code: c };
     },
-    moduleResolver: options.moduleResolver || _nodeModuleResolver2.default,
-    moduleLoader: options.moduleLoader || _nodeModuleLoader2.default
+    moduleResolver: options.moduleResolver,
+    moduleLoader: options.moduleLoader
   });
   let compiledMod = modules.compileEntrypoint(source, options.filename, options.enforcePragma);
   let nativeImports = compiledMod.importEntries.filter(imp => !modules.has(imp.moduleSpecifier.val()));
