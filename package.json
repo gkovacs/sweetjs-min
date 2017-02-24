@@ -2,14 +2,6 @@
   "author": {
     "name": "Tim Disney"
   },
-  "bin": {
-    "sjs": "bin/sjs"
-  },
-  "browser": {
-    "babel-core": false,
-    "./build/src/node-module-loader.js": false,
-    "./build/src/node-module-resolver.js": false
-  },
   "bugs": {
     "url": "https://github.com/gkovacs/sweetjs-min/issues"
   },
@@ -32,5 +24,5 @@
     "type": "git",
     "url": "git://github.com/gkovacs/sweetjs-min.git"
   },
-  "version": "2.2.10"
+  "version": "2.2.11"
 }
