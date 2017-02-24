@@ -1,27 +1,108 @@
 {
-  "homepage": "https://github.com/gkovacs/sweetjs-min#readme",
+  "name": "sweet.js",
+  "description": "Hygienic Macros for JavaScript",
+  "main": "dist/sweet.js",
+  "bin": {
+    "sjs": "bin/sjs"
+  },
+  "version": "2.2.1",
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "author": "Tim Disney",
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/sweet-js/sweet.js/master/LICENSE.BSD"
+    }
+  ],
+  "browser": {
+    "babel-core": false
+  },
+  "scripts": {
+    "clean": "rm -rf build",
+    "lint": "eslint src test && flow",
+    "prebuild": "mkdir -p build/test build/sweet dist/",
+    "build:src": "babel --out-dir build/src src",
+    "build:browser": "webpack build/src/browser-sweet.js --output-library-target amd --output-library sweet",
+    "build": "npm run build:src && npm run build:browser",
+    "preprofile": "npm run build",
+    "profile": "node --prof profile.js && node --prof-process *v8.log > v8-processed.log && rm *v8.log",
+    "pretest": "npm run lint",
+    "test:ci": "npm run pretest && ava && ava test/test-compile-external-libs.js",
+    "test": "ava",
+    "report": "nyc ava && nyc report--reporter=html",
+    "docs": "asciidoctorjs doc/1.0/tutorial.adoc & asciidoctorjs doc/1.0/reference.adoc",
+    "dist": "rsync -r build/src/ dist"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "immutable": "^3.7.4",
+    "ramda": "^0.22.0",
+    "ramda-fantasy": "^0.6.0",
+    "readtable": "^0.0.1",
+    "resolve": "^1.1.7",
+    "semver": "^5.3.0",
+    "shift-codegen": "^4.0.0",
+    "shift-js": "^0.2.1",
+    "shift-reducer": "^3.0.2",
+    "shift-spidermonkey-converter": "^1.0.0",
+    "sweet-spec": "3.0.0",
+    "transit-js": "^0.8.846",
+    "utils-dirname": "^1.0.0",
+    "yargs": "^4.3.2"
+  },
+  "devDependencies": {
+    "angular": "1.6.0",
+    "asciidoctor-cli": "^1.5.2-alpha.3",
+    "asciidoctor.js": "^1.5.4",
+    "ava": "^0.18.2",
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "babel-preset-node7": "1.4.0",
+    "babel-register": "6.18.0",
+    "eslint": "^3.7.1",
+    "eslint-plugin-flowtype": "^2.11.4",
+    "event-stream": "^3.3.2",
+    "expect.js": "0.3.x",
+    "flow-bin": "^0.39.0",
+    "jquery": "3.1.1",
+    "nyc": "^6.0.0",
+    "source-map": "~0.5.3",
+    "source-map-support": "^0.4.0",
+    "webpack": "^1.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sweet-js/sweet.js.git"
+  },
   "keywords": [
     "macros",
     "javascript"
   ],
-  "main": "dist/sweet.js",
-  "name": "sweetjs-min",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gkovacs/sweetjs-min.git"
-  },
-  "version": "2.2.9",
-  "devDependencies": {},
-  "dependencies": {
-    "immutable": "^3.8.1",
-    "ramda": "^0.23.0",
-    "ramda-fantasy": "^0.7.0",
-    "shift-codegen": "^5.0.2",
-    "shift-parser": "^5.0.2",
-    "shift-reducer": "3.0.3",
-    "sweet-spec": "1.1.0",
-    "transit-js": "^0.8.846"
+  "license": "BSD-2-Clause",
+  "ava": {
+    "babel": "inherit",
+    "files": [
+      "test/test-asi.js",
+      "test/test-default-readtable.js",
+      "test/test-hygiene.js",
+      "test/test-macro-context.js",
+      "test/test-macro-expansion.js",
+      "test/test-modules.js",
+      "test/test-reader-extensions.js",
+      "test/test-reader.js",
+      "test/test-run-test262.js",
+      "test/test-sweet-loader.js",
+      "test/test-symbols.js",
+      "test/test-syntax.js"
+    ],
+    "require": [
+      "babel-register"
+    ]
   }
 }
