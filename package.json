@@ -10,7 +10,6 @@
     "ramda": "^0.19.0",
     "ramda-fantasy": "^0.4.1",
     "shift-codegen": "^4.0.0",
-    "shift-js": "^0.2.1",
     "shift-parser": "^4.1.0",
     "shift-reducer": "^3.0.2",
     "sweet-spec": "1.1.0",
@@ -24,5 +23,5 @@
     "type": "git",
     "url": "git://github.com/gkovacs/sweetjs-min.git"
   },
-  "version": "2.2.12"
+  "version": "2.2.13"
 }
