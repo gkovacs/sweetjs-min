@@ -9,8 +9,13 @@ let internedMap = new Map();
 let counter = 0;
 
 function gensym(name) {
-  let prefix = name == null ? "s_" : name + "_";
-  let sym = new Symbol(prefix + counter);
+  let prefix = name == null ? 's_' : name + '_';
+  let sym;
+  if (name == null) {
+    sym = new Symbol(prefix + counter);
+  } else {
+    sym = new Symbol(name);
+  }
   counter++;
   return sym;
 }
