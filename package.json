@@ -22,7 +22,7 @@
     "shift-parser": "^4.1.0",
     "shift-reducer": "^3.0.2",
     "sweet-spec": "1.1.0",
-    "transit-js": "^0.8.846",
+    "transit-js": "^0.8.846"
   },
   "description": "Hygienic Macros for JavaScript",
   "homepage": "https://github.com/gkovacs/sweetjs-min#readme",
