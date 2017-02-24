@@ -45,8 +45,6 @@ var _scopeReducer2 = _interopRequireDefault(_scopeReducer);
 
 var _macroContext = require('./macro-context');
 
-var _babelCore = require('babel-core');
-
 var _store = require('./store');
 
 var _store2 = _interopRequireDefault(_store);
@@ -74,14 +72,9 @@ class SweetLoader {
       getTemplateIdentifier: () => ++tempIdent,
       loader: this,
       transform: c => {
-        if (noBabel) {
-          return {
-            code: c
-          };
-        }
-        return (0, _babelCore.transform)(c, {
-          babelrc: true
-        });
+        return {
+          code: c
+        };
       }
     };
   }
